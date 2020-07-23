@@ -5,9 +5,10 @@ import Cart from './Cart';
 
 const ItemList = () => {
   const products = useSelector((st) => st.products);
+  console.log(products);
 
   // iterate over key/value pairs
-  const allProducts = Object.keys(products).map((prodId) => <Item key={prodId} id={prodId} name={products[prodId].name} img={products[prodId].img_url} />);
+  const allProducts = Object.keys(products).map((prodId) => <Item key={prodId} id={prodId} name={products[prodId].name} img={products[prodId].img_url} price={products[prodId].price} />);
   return (
     <div className='Products'>
       <div>
