@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addToCart } from './actions';
+import { NavLink, Link } from 'react-router-dom';
 import './Item.css';
 
-// every item will have a link to their specific details
+// every item will have a link to their specific details | wrap a link around the item div
 const Item = ({ id, name, img, price }) => {
   const dispatch = useDispatch();
 
@@ -11,8 +12,8 @@ const Item = ({ id, name, img, price }) => {
 
   return (
     <div className='Item'>
-      {name} ${price}
-      <img src={img} />
+      <Link to={`/products/${id}`}> {name} </Link>${price}
+      <img src={img} alt='' />
       <button onClick={add}>Add</button>
     </div>
   );
