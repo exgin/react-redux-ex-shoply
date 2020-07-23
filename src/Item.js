@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { addToCart } from './actions';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Item.css';
 
 // every item will have a link to their specific details | wrap a link around the item div
 const Item = ({ id, name, img, price }) => {
   const dispatch = useDispatch();
-
   const add = () => dispatch(addToCart(id));
 
   return (

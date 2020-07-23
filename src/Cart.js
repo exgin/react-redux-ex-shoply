@@ -24,9 +24,9 @@ const Cart = () => {
   //   display the items in the cart & the number of occuring to that item
   return (
     <div className='Cart'>
-      <h3>Cart</h3>
-      {cartItems}
-      <p>Total: {cartTotal}</p>
+      <span>
+        {cartItems}Total: ${cartTotal}
+      </span>
     </div>
   );
 };
